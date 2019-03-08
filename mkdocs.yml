@@ -50,6 +50,9 @@ nav:
     - Getting Started:
         - Guide/how_to_setup.md
         - Guide/API.md
+    - Financial Instruments:
+        - FinIns/Invoices.md
+        - FinIns/Bonds.md
     - Media Room:
         - Media/Articles.md
     - FAQ:
