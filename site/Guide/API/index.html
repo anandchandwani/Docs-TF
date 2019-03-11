@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>API - TradeFinex</title>
+  <title>SME API - TradeFinex</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -19,7 +19,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "API";
+    var mkdocs_page_name = "SME API";
     var mkdocs_page_input_path = "Guide\\API.md";
     var mkdocs_page_url = "/Guide/API/";
   </script>
@@ -65,9 +65,20 @@
                 </li>
                 <li class=" current">
                     
-    <a class="current" href="./">API</a>
+    <a class="current" href="./">SME API</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#sme-api">SME API</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#introduction">Introduction</a></li>
+        
+            <li><a class="toctree-l4" href="#authentication">Authentication</a></li>
+        
+        </ul>
+    
+
     </ul>
                 </li>
     </ul>
@@ -152,7 +163,7 @@
         
       
     
-    <li>API</li>
+    <li>SME API</li>
     <li class="wy-breadcrumbs-aside">
       
         <a href="https://github.com/XinFinOrg/Docs-TF/edit/master/docs/Guide/API.md"> Edit on XinFinOrg/Docs-TF</a>
@@ -164,7 +175,47 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="sme-api">SME API<a class="headerlink" href="#sme-api" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Welcome to the SME API.</p>
+<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
+<p>A JSON Web Token is used to send information that can be verified and trusted by <strong>means</strong> of a digital signature. It comprises a compact and URL-safe JSON object, which is cryptographically signed to verify its authenticity, and which can also be encrypted if the payload contains sensitive information.</p>
+<p>Application may request to access routes, services, or resources on behalf of that user. To do so, it uses an access token, which is in the form of a <strong>JWT</strong> token. user has to provide <strong>JWT</strong> token in header as a authorization in every subsequent request after login.</p>
+<p _="%" endapi-method-summary="endapi-method-summary">{% api-method method="post" host="5.133.176.54:82/api/" path="v1.0/auth/authenticate" %}
+{% api-method-summary %}
+Authentication</p>
+<p _="%" endapi-method-description="endapi-method-description">{% api-method-description %}
+Authenticate API in environment with token in response</p>
+<p _="%" endapi-method-request="endapi-method-request">{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="user" type="string" required=true %}
+API Key or any secret key
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}</p>
+<p _="%" api-method-response-example-description="api-method-response-example-description">{% api-method-response %}
+{% api-method-response-example httpCode=200 %}</p>
+<p>{% endapi-method-response-example-description %}</p>
+<div class="codehilite"><pre><span></span>{
+    &quot;success&quot;: true,
+    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NDk1MzEzNTIsImV4cCI6MTU0OTYxNzc1Mn0.6cTXghU1IdDreucri4nQKK-Q2HjnHgL7CtTKmvYTRzo&quot;
+}
+</pre></div>
+
+
+<p>{% endapi-method-response-example %}</p>
+<p _="%" api-method-response-example-description="api-method-response-example-description">{% api-method-response-example httpCode=403 %}</p>
+<p>{% endapi-method-response-example-description %}</p>
+<div class="codehilite"><pre><span></span>{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;403 - Invalid API secret key.&quot;
+}
+</pre></div>
+
+
+<p _="%" endapi-method="endapi-method">{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}</p>
               
             </div>
           </div>
