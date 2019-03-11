@@ -53,3 +53,8 @@ Authenticate API in environment with token in response
 
 }
 ```
+
+[ Tab1 | Tab2 ]
+--------------
+[ Content1 ]
+[ Content2 ]
