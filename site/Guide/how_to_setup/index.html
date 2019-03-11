@@ -269,6 +269,47 @@
 
 
 <p><img alt="overview" src="/assets/masternode-node.png" /></p>
+<p><strong>3. Website Set-Up</strong></p>
+<p><strong>Prerequisite</strong></p>
+<p>Xampp</p>
+<p>Clone this Repo directly into xampp/htdocs path.</p>
+<p><img alt="screenshot_2019-02-26 xinfinorg tradefinexlive" src="https://user-images.githubusercontent.com/22572604/53394517-8d17d280-39c5-11e9-875c-510792592022.png" /></p>
+<p><strong>Front End</strong></p>
+<p>Go to - application/config.php</p>
+<p>Set - $config['base_url'] = 'http://example.com/' or 'https://example.com/'</p>
+<p><img alt="ss2" src="https://user-images.githubusercontent.com/22572604/53398863-ae31f080-39d0-11e9-9c6c-4c293bfa2220.png" /></p>
+<p>Go to - application/database.php</p>
+<p>Set -
+'hostname' =&gt; 'localhost', (change required if needed)
+'username' =&gt; '',
+'password' =&gt; '',
+'database' =&gt; '',</p>
+<p><img alt="ss3" src="https://user-images.githubusercontent.com/22572604/53399063-2ef0ec80-39d1-11e9-8f1a-f29c38c1d422.png" /></p>
+<p>Go to - application/emailc.php</p>
+<p>Set -</p>
+<p>
+<script type="math/tex">config['</script>econfig'] = array('protocol' =&gt; 'smtp',</p>
+<p>'smtp_host' =&gt; '', /* email gateway host /</p>
+<p>'smtp_port' =&gt; 465,</p>
+<p>'smtp_user' =&gt; '', / email gateway username /</p>
+<p>'smtp_pass' =&gt; '', / email gateway password */</p>
+<p>'wordwrap' =&gt; TRUE,</p>
+<p>'charset' =&gt; 'utf-8');</p>
+<p><img alt="ss4" src="https://user-images.githubusercontent.com/22572604/53399233-9444dd80-39d1-11e9-8cb1-87b9e948066b.png" /></p>
+<p><strong>adminpanel</strong></p>
+<p>Go to - application/adminpanel/config.php</p>
+<p>Set - $config['base_url'] = 'http://example.com/adminpanel/' or 'https://example.com/adminpanel/'</p>
+<p><img alt="ss5" src="https://user-images.githubusercontent.com/22572604/53400806-a5dbb480-39d4-11e9-9efd-165507ee1d2e.png" /></p>
+<p>Go to - application/adminpanel/constants.php</p>
+<p>Set to - define('BASE_FRONT_URL', 'http://example.com/' or 'https://example.com/');</p>
+<p><img alt="ss6" src="https://user-images.githubusercontent.com/22572604/53404917-ac6e2a00-39dc-11e9-9dea-463783a8bdc8.png" /></p>
+<p>Go to - application/adminpanel/database.php</p>
+<p>Set to -</p>
+<p>'hostname' =&gt; 'localhost', (change required if needed)</p>
+<p>'username' =&gt; '',</p>
+<p>'password' =&gt; '',</p>
+<p>'database' =&gt; '',</p>
+<p><img alt="ss7" src="https://user-images.githubusercontent.com/22572604/53493055-74d8ae00-3ac0-11e9-8da4-b632c1619ba5.png" /></p>
               
             </div>
           </div>

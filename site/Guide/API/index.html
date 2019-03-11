@@ -181,41 +181,34 @@
 <h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
 <p>A JSON Web Token is used to send information that can be verified and trusted by <strong>means</strong> of a digital signature. It comprises a compact and URL-safe JSON object, which is cryptographically signed to verify its authenticity, and which can also be encrypted if the payload contains sensitive information.</p>
 <p>Application may request to access routes, services, or resources on behalf of that user. To do so, it uses an access token, which is in the form of a <strong>JWT</strong> token. user has to provide <strong>JWT</strong> token in header as a authorization in every subsequent request after login.</p>
-<p _="%" endapi-method-summary="endapi-method-summary">{% api-method method="post" host="5.133.176.54:82/api/" path="v1.0/auth/authenticate" %}
-{% api-method-summary %}
-Authentication</p>
-<p _="%" endapi-method-description="endapi-method-description">{% api-method-description %}
-Authenticate API in environment with token in response</p>
-<p _="%" endapi-method-request="endapi-method-request">{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="user" type="string" required=true %}
-API Key or any secret key
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}</p>
-<p _="%" api-method-response-example-description="api-method-response-example-description">{% api-method-response %}
-{% api-method-response-example httpCode=200 %}</p>
-<p>{% endapi-method-response-example-description %}</p>
-<div class="codehilite"><pre><span></span>{
-    &quot;success&quot;: true,
-    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NDk1MzEzNTIsImV4cCI6MTU0OTYxNzc1Mn0.6cTXghU1IdDreucri4nQKK-Q2HjnHgL7CtTKmvYTRzo&quot;
-}
+<p>Project list</p>
+<div class="admonition get">
+<p class="admonition-title">Get</p>
+</div>
+<p><strong>Authentication</strong></p>
+<div class="codehilite"><pre><span></span>       http://5.133.176.54:82/api/v1.0/auth/authenticate
 </pre></div>
 
 
-<p>{% endapi-method-response-example %}</p>
-<p _="%" api-method-response-example-description="api-method-response-example-description">{% api-method-response-example httpCode=403 %}</p>
-<p>{% endapi-method-response-example-description %}</p>
-<div class="codehilite"><pre><span></span>{
-    &quot;success&quot;: false,
-    &quot;message&quot;: &quot;403 - Invalid API secret key.&quot;
-}
-</pre></div>
-
-
-<p _="%" endapi-method="endapi-method">{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}</p>
+<p>Authenticate API in environment with token in response</p>
+<p><strong>Example request</strong>:</p>
+<p>Path Parameters</p>
+<p>{
+"user : REQUIRED",
+"string",
+"API Key or any secret key"
+}</p>
+<p><strong>Example response</strong>:</p>
+<p><strong>200: OK</strong></p>
+<p>{
+    "success": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NDk1MzEzNTIsImV4cCI6MTU0OTYxNzc1Mn0.6cTXghU1IdDreucri4nQKK-Q2HjnHgL7CtTKmvYTRzo"
+}</p>
+<p><strong>403: Forbidden</strong></p>
+<p>{
+    "success": false,
+    "message": "403 - Invalid API secret key."
+}</p>
               
             </div>
           </div>
