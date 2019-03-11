@@ -27,7 +27,7 @@ Authenticate API in environment with token in response
 
 `POST 5.133.176.54:82/api/v1.0/auth/authenticate`
 
-> **on sucess**:
+> **on Sucess**:
 
 **200: OK**
 
@@ -40,6 +40,7 @@ Authenticate API in environment with token in response
 
 ```
 
+> **on Failed**:
 
 **403: Forbidden**
 
