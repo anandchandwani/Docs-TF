@@ -21,31 +21,28 @@ Project list
 
 Authenticate API in environment with token in response
 
-**Example request**:
-
-Path Parameters
-
-{
+[ Request | Response ]
+--------------
+[ {
 "user : REQUIRED",
 "string",
 "API Key or any secret key"
-}
+} ]
 
-
-**Example response**:
-
-
-**200: OK**
+[ 200: OK
 
 {
     "success": true,
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NDk1MzEzNTIsImV4cCI6MTU0OTYxNzc1Mn0.6cTXghU1IdDreucri4nQKK-Q2HjnHgL7CtTKmvYTRzo"
 }
 
-**403: Forbidden**
+403: Forbidden
 
 {
     "success": false,
     "message": "403 - Invalid API secret key."
 }
+ ]
+
+
 

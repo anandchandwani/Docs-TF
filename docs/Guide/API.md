@@ -25,31 +25,27 @@ Authenticate API in environment with token in response
 
 ### HTTP Request
 
-`POST 5.133.176.54:82/api/v1.0/auth/authenticate`
+`POST: http://5.133.176.54:82/api/v1.0/auth/authenticate`
 
-> **on Sucess**:
 
-**200: OK**
+[ Request | Response ]
+--------------
+[ "user : REQUIRED",
+"string",
+"API Key or any secret key"
+]
 
-```json
+[ 200: OK
+
 {
     "success": true,
-
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NDk1MzEzNTIsImV4cCI6MTU0OTYxNzc1Mn0.6cTXghU1IdDreucri4nQKK-Q2HjnHgL7CtTKmvYTRzo"
 }
 
-```
+403: Forbidden
 
-> **on Failed**:
-
-**403: Forbidden**
-
-```json
 {
-
     "success": false,
-
     "message": "403 - Invalid API secret key."
-
 }
-```
+ ]

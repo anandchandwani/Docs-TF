@@ -173,24 +173,23 @@
 
 
 <p>Authenticate API in environment with token in response</p>
-<p><strong>Example request</strong>:</p>
-<p>Path Parameters</p>
-<p>{
+<h2 id="request-response">[ Request | Response ]<a class="headerlink" href="#request-response" title="Permanent link">&para;</a></h2>
+<p>[ {
 "user : REQUIRED",
 "string",
 "API Key or any secret key"
-}</p>
-<p><strong>Example response</strong>:</p>
-<p><strong>200: OK</strong></p>
+} ]</p>
+<p>[ 200: OK</p>
 <p>{
     "success": true,
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NDk1MzEzNTIsImV4cCI6MTU0OTYxNzc1Mn0.6cTXghU1IdDreucri4nQKK-Q2HjnHgL7CtTKmvYTRzo"
 }</p>
-<p><strong>403: Forbidden</strong></p>
+<p>403: Forbidden</p>
 <p>{
     "success": false,
     "message": "403 - Invalid API secret key."
-}</p>
+}
+ ]</p>
               
             </div>
           </div>
