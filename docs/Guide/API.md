@@ -1,9 +1,5 @@
-# SME API
-
-
 
 ## Introduction
-
 
 
 Welcome to the SME API.
@@ -25,31 +21,25 @@ Authenticate API in environment with token in response
 
 ### HTTP Request
 
-`POST 5.133.176.54:82/api/v1.0/auth/authenticate`
+````POST 5.133.176.54:82/api/v1.0/auth/authenticate````
 
-> **on Sucess**:
 
-**200: OK**
-
-```json
-{
-    "success": true,
-
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NDk1MzEzNTIsImV4cCI6MTU0OTYxNzc1Mn0.6cTXghU1IdDreucri4nQKK-Q2HjnHgL7CtTKmvYTRzo"
-}
-
+```Request
+ user           string                API Key or any secret key
+ REQUIRED
 ```
 
-> **on Failed**:
+```Response
 
-**403: Forbidden**
-
-```json
+200: OK
 {
-
-    "success": false,
-
-    "message": "403 - Invalid API secret key."
-
+    "success": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NDk1MzEzNTIsImV4cCI6MTU0OTYxNzc1Mn0.6cTXghU1IdDreucri4nQKK-Q2HjnHgL7CtTKmvYTRzo"
 }
+403: Forbidden
+{
+    "success": false,
+    "message": "403 - Invalid API secret key."
+}
+
 ```
